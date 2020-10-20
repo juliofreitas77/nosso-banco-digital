@@ -35,7 +35,6 @@ public class UploadService {
     @Autowired
     private PropostaService propostaService;
 
-
     @Transactional
     public Proposta insert(byte[] img, Integer idCliente) {
         int t = img.length;

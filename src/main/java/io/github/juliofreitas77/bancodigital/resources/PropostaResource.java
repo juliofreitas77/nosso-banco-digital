@@ -24,7 +24,6 @@ public class PropostaResource {
         return ResponseEntity.ok().body(proposta);
     }
 
-
     @RequestMapping (value = "/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Void> update(@Valid @RequestBody PropostaDTO objDto) throws IOException {
             Proposta proposta = service.find(objDto.getId());

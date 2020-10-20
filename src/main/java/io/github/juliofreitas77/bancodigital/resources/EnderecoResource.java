@@ -15,6 +15,9 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
+    #2 Cadastro de Endereço
+ */
 @RestController
 @RequestMapping(value = "/enderecos")
 public class EnderecoResource {

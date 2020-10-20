@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 public class ImageCPF implements Serializable {
@@ -68,5 +69,18 @@ public class ImageCPF implements Serializable {
 
     public void setProposta(Proposta proposta) {
         this.proposta = proposta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ImageCPF imageCPF = (ImageCPF) o;
+        return getId().equals(imageCPF.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }

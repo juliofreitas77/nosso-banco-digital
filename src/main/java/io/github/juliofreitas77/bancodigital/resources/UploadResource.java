@@ -19,6 +19,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 
+/*
+    # 3 Upload da frente do cpf
+    Existe tambem parte do card #, pois apos o upload acontece as validaçoes dos passos anterioes
+    e criação da proposta com todas as informações.
+ */
 @RestController
 @RequestMapping("/upload")
 @Valid

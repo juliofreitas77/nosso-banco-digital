@@ -48,15 +48,6 @@ public class ResourceExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
     }
 
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    public ResponseEntity<StantardError> unprocessableEntity(MethodArgumentNotValidException e, HttpServletRequest request) {
-//        ValidationError err = new ValidationError(System.currentTimeMillis(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Erros nas validações", e.getMessage(), request.getRequestURI());
-//        for (FieldError x : e.getBindingResult().getFieldErrors()) {
-//            err.addError(x.getField(), x.getDefaultMessage());
-//        }
-//        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(err);
-//    }
-
     @ExceptionHandler(ValidaPropostaException.class)
     public ResponseEntity<StantardError> validaregra(ValidaPropostaException e, HttpServletRequest request) {
         ValidationError err = new ValidationError(System.currentTimeMillis(), HttpStatus.NOT_FOUND.value(), "Objeto não encontrado", e.getMessage(), request.getRequestURI());

@@ -34,10 +34,6 @@ public class ClienteService {
             throw new ClienteDuplicadoException("Dados já existes na base: CPF: " + obj.getCpf()
             +" Email: " + obj.getEmail());
         }
-//        if (obj.getEmail().equals(cli.getEmail())) {
-//            throw new ClienteDuplicadoException("Email já existe na base: " + obj.getEmail());
-//            // lista.add(new FieldMessage("email", "Email existente na base"));
-//        }
         else {
             int idadeCliente = Period.between(obj.getDataNascimento(), LocalDate.now()).getYears();
             if (idadeCliente >= 18) {

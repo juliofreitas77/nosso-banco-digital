@@ -14,6 +14,10 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/*
+    #1  Informaçoes basicas do cliente
+ */
 @RestController
 @RequestMapping(value = "/cliente")
 public class ClienteResource {

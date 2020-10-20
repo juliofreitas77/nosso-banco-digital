@@ -42,12 +42,4 @@ public class PropostaService {
     public Proposta save(Proposta obj){
         return propostaRepository.save(obj);
     }
-
-//    public Proposta find(Proposta obj){
-//        Proposta proposta = new Proposta();
-//        proposta.setId(obj.getId());
-//        proposta.setCliente(obj.getCliente());
-//        proposta.se
-//        return proposta;
-//    }
 }

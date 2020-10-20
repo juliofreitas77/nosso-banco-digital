@@ -47,10 +47,4 @@ public class EnderecoService {
    public Endereco findByClienteId(Integer id){
         return repository.findByClienteId(id);
    }
-
-//    public Endereco encontrarPeloIdCliente(Integer id){
-//        return repository.encontrarPeloIdCliente(id);
-//    }
-
-
 }
